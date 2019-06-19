@@ -10,6 +10,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "push-dir": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "generate": "nuxt generate"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "nodemon": "^1.18.9",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
+    "push-dir": "^0.4.1",
     "qonfucius-nuxt-fontawesome": "^1.0.1",
     "sass-loader": "^7.1.0",
     "vue-carousel": "^0.18.0"
