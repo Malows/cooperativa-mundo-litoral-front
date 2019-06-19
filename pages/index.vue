@@ -12,16 +12,31 @@
 
     services
 
+    nos-banner
+
     cards
+
+    .container
+      div
+        h1.title clientes
+
+    .container
+      div
+        h1.title formulario
+
+    .container
+      div
+        h1.title footer
 
 </template>
 
 <script>
 import Cards from '../components/cards/Cards'
 import Services from '../components/services/Services'
+import NosBanner from '../components/NosBanner'
 
 export default {
-  components: { Cards, Services }
+  components: { Cards, Services, NosBanner }
 }
 </script>
 
