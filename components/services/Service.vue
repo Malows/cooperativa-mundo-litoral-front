@@ -1,7 +1,9 @@
 <template lang="pug" functional>
   .service
     .service__img
-      img(:src="props.src")
+      picture
+        source(:srcset="props.src + '.webp'" type="image/webp")
+        img(:src="props.src +  '.png'")
     h4.service__name {{ props.name }}
     p.service__body {{ props.body }}
 </template>
@@ -19,6 +21,11 @@
 
     &__img {
       height: 16.8rem;
+      * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     &__name {
