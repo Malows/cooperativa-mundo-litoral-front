@@ -21,18 +21,18 @@
     background-size: cover;
 
     height: 100vh;
-    background-image: url('/img/nos--sm.png');
+    background-image: url('img/nos--sm.png');
     padding: 0 3rem;
 
     @media (min-width: 640px) {
       height: 75vh;
-      background-image: url('/img/nos--md.png');
+      background-image: url('img/nos--md.png');
       padding: 0 10rem;
     }
 
     @media (min-width: 1200px) {
       height: 50vh;
-      background-image: url('/img/nos--lg.png');
+      background-image: url('img/nos--lg.png');
       padding: 0 15rem;
     }
   }
