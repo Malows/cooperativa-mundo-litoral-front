@@ -1,5 +1,5 @@
 <template lang="pug" functional>
-  .nosotros
+  section#nosotros.nosotros
     h4.nosotros__title Nosotros
     p.nosotros__body
       | Somos una cooperatica de trabajo joven y dinámica, donde la misión es llevar los mejores resultados
@@ -8,32 +8,42 @@
       | comunes, dentro del proceso de mejora continua, brindando a nuestros clientes servicios de calidad.
 </template>
 
-<style  lang="scss">
+<style lang="scss">
   .nosotros {
     text-align: center;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('~assets/img/nos--sm.png');
     padding: 0 3rem;
 
-    @media (min-width: 640px) {
-      height: 75vh;
+    @media (min-width: 600px) {
+      min-height: 75vh;
       background-image: url('~assets/img/nos--md.png');
       padding: 0 10rem;
     }
 
     @media (min-width: 1200px) {
-      height: 50vh;
+      min-height: 50vh;
       background-image: url('~assets/img/nos--lg.png');
       padding: 0 15rem;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    &__body {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin: 1.5rem 0;
     }
   }
 </style>
