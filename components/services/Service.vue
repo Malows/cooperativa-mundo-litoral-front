@@ -6,11 +6,13 @@
           :srcset="`${props.src}--sm.webp 599w, ${props.src}--md.webp 1199w, ${props.src}--lg.webp 1200w`"
           sizes="(max-width: 639px) 100%, (max-width: 1199px) 100%, 100%"
           type="image/webp"
+          :alt="props.name"
           )
         img(
           :srcset="`${props.src}--sm.png 599w, ${props.src}--md.png 11998w, ${props.src}--lg.png 1200w`"
           sizes="(max-width: 599px) 100%, (max-width: 1199px) 100%, 100%"
           :src="`${props.src}--sm.png`"
+          :alt="props.name"
           )
 
     h4.service__name {{ props.name }}

@@ -2,8 +2,8 @@
   nav.navbar
     .navbar__logo
       picture
-        source(srcset="~/assets/img/logo.webp" type="image/webp")
-        img(src="~/assets/img/logo.jpg")
+        source(srcset="~/assets/img/logo.webp" type="image/webp" alt="brand logo")
+        img(src="~/assets/img/logo.jpg" alt="brand logo")
 </template>
 
 <style lang="scss">
