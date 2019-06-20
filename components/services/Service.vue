@@ -39,7 +39,7 @@
 
     &__name {
       margin: 1rem 0;
-      font-size: 1.7rem;
+      font-size: 1.625rem;
     }
     &__body {
       margin: 1rem 0;
