@@ -1,5 +1,7 @@
 <template lang="pug">
   main
+    navbar#inicio
+
     .container
       div
         h1.title carrusel
@@ -10,33 +12,33 @@
 
       //- carousel
 
-    services
+    services#servicios
 
-    nos-banner
+    nos-banner#nosotros
 
-    cards
+    cards#cards
 
-    .container
+    #clientes.container
       div
         h1.title clientes
 
-    .container
+    #contacto.container
       div
         h1.title formulario
 
-    .container
-      div
-        h1.title footer
-
+    footer-section
 </template>
 
 <script>
+import Navbar from '../components/Navbar'
 import Cards from '../components/cards/Cards'
 import Services from '../components/services/Services'
 import NosBanner from '../components/NosBanner'
+import Footer from '../components/Footer'
+import '~/assets/scss/style.scss'
 
 export default {
-  components: { Cards, Services, NosBanner }
+  components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer }
 }
 </script>
 
@@ -56,15 +58,13 @@ export default {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-size: 3rem;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
