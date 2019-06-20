@@ -1,4 +1,4 @@
-for file in slide*
+for file in *.png
 do
-    cwebp -q 85 "$file" -o "$file.webp"
+    cwebp -q 100 -lossless "$file" -o "$file.webp"
 done

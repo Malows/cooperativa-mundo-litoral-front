@@ -10,6 +10,7 @@
   .navbar {
     height: 4rem;
     padding: .5rem 1rem;
+    background-color: #fff;
 
     &__logo {
       height: 100%;
