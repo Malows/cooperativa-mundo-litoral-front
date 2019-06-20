@@ -1,0 +1,18 @@
+:root {
+  --color-main: #003f54;
+  --color-main--light: #005c5e;
+  --color-main--lighter: #137c7e;
+
+  --color-error: #3c9c8a;
+  --color-warning: #009c88;
+
+  --color-divider: #212b36;
+  --color-border: #a5c0bf;
+
+  --color-background: #f5f6f6;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-divider);
+}
