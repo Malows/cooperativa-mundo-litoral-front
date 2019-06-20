@@ -1,12 +1,13 @@
 <template lang="pug">
-  section.cards
-    card(
-      v-for="(carta, index) in cartas"
-      :key="index"
-      :important="carta.important"
-      :title="carta.title"
-      :body="carta.body"
-    )
+  section#cards
+    .cards
+      card(
+        v-for="(carta, index) in cartas"
+        :key="index"
+        :important="carta.important"
+        :title="carta.title"
+        :body="carta.body"
+      )
 </template>
 
 <script>
@@ -41,11 +42,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  #cards {
+    display: flex;
+    justify-content: center;
+  }
+
   .cards {
-    display: grid;
     margin: 2rem 10vw;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
+
+    @media (min-width: 720px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>
