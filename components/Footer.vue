@@ -26,9 +26,11 @@
 
       a {
         text-decoration: none;
-        &:link { color: white; }
-        &:hover { color: white; }
-        &:visited { color: white; }
+        cursor: pointer;
+
+        @each $op in link, hover, visited, active {
+          &:#{$op} { color: white; }
+        }
       }
     }
   }
