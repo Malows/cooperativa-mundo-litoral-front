@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
+  body { overflow-x: hidden; }
+
   @import 'vueperslides/dist/vueperslides.css';
 
   .vueperslides {
