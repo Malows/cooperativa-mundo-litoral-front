@@ -2,9 +2,10 @@
   main
     navbar#inicio
 
-    .container
-      div
-        h1.title carrusel
+    carousel
+    //- .container
+    //-   div
+    //-     h1.title carrusel
         //- h2.subtitle My super-duper Nuxt.js project
         //- .links
         //-   a.button--green(href="https://nuxtjs.org/" target="_blank") Documentation
@@ -35,10 +36,12 @@ import Cards from '../components/cards/Cards'
 import Services from '../components/services/Services'
 import NosBanner from '../components/NosBanner'
 import Footer from '../components/Footer'
+import Carousel from '../components/Carousel'
 import '~/assets/scss/style.scss'
+import 'vueperslides/dist/vueperslides.css'
 
 export default {
-  components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer }
+  components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer, Carousel }
 }
 </script>
 

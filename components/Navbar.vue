@@ -12,6 +12,8 @@
     padding: .5rem 1rem;
     background-color: #fff;
 
+    @media (min-width: 600px) { height: 10vh; }
+
     &__logo {
       height: 100%;
 
