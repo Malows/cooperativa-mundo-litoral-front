@@ -46,6 +46,7 @@ export default {
   #cards {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
   }
 
   .cards {
