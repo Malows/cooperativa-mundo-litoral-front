@@ -96,24 +96,4 @@ export default {
       height: 90vh;
     }
   }
-
-  .vueperslides__bullet {
-    width: 12px;
-    height: 12px;
-    border-radius: 12px;
-    border: 1px solid var(--color-main);
-    background-color: var(--color-main);
-    box-shadow: 0 0 1px rgba(#000, 0.5), 0 0 3px rgba(#000, 0.3);
-    margin: 1.5em 0.6em;
-    padding: 0;
-    transition: 0.4s ease-in-out;
-
-    &--active {
-      background-color: var(--color-main);
-      border-width: 6px;
-    }
-    span {
-      color: var(--color-main);
-    }
-  }
 </style>

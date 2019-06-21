@@ -38,41 +38,63 @@ import NosBanner from '../components/NosBanner'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
 import '~/assets/scss/style.scss'
-import 'vueperslides/dist/vueperslides.css'
 
 export default {
   components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer, Carousel }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #2222;
-}
+<style lang="scss">
+  @import 'vueperslides/dist/vueperslides.css';
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: 1px;
-}
+  .vueperslides {
+    &__bullet {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 1rem;
+      border: 1px solid var(--color-main--light);
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+      &--active { background-color: var(--color-main); }
+    }
 
-.links {
-  padding-top: 15px;
-}
+    @media (min-width: 600px) {
+      &__bullet { margin: .6rem 1.5rem; }
+
+      &__bullets {
+        flex-direction: column;
+        left: calc(100% - 4rem);
+        top: 0;
+      }
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2222;
+  }
+
+  .title {
+    font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: block;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-weight: 300;
+    font-size: 42px;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+  }
+
+  .links {
+    padding-top: 15px;
+  }
 </style>
