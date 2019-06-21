@@ -1,13 +1,12 @@
 <template lang="pug">
   vueper-slides(
     autoplay
+    fade
     :dragging-distance="50"
     :arrows="false"
-    :speed="5000"
+    :speed="6000"
     :fixed-height="true"
     :slide-ratio="1"
-    :bullets="true"
-    :bullets-outside="true"
     )
 
     vueper-slide(v-for="page in parsedPages" :key="page.key" :image="page.src" :title="page.title" :content="page.body")
