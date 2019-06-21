@@ -23,9 +23,7 @@
       div
         h1.title clientes
 
-    #contacto.container
-      div
-        h1.title formulario
+    contacto#contacto
 
     footer-section
 </template>
@@ -37,10 +35,11 @@ import Services from '../components/services/Services'
 import NosBanner from '../components/NosBanner'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
+import Contacto from '../components/contacto/Contacto'
 import '~/assets/scss/style.scss'
 
 export default {
-  components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer, Carousel }
+  components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer, Carousel, Contacto }
 }
 </script>
 
