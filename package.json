@@ -17,6 +17,8 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@nuxtjs/eslint-config": "^0.0.1",
     "@nuxtjs/eslint-module": "^0.0.1",
     "babel-eslint": "^10.0.1",
@@ -31,10 +33,10 @@
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
+    "nuxt-fontawesome": "^0.4.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "push-dir": "^0.4.1",
-    "qonfucius-nuxt-fontawesome": "^1.0.1",
     "sass-loader": "^7.1.0",
     "vueperslides": "^1.19.0"
   }

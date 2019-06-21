@@ -37,8 +37,19 @@ export default {
   */
   modules: [
     '@nuxtjs/eslint-module',
-    'qonfucius-nuxt-fontawesome'
-    // ['qonfucius-nuxt-fontawesome', { componentName: 'fa-icon', packs: ['fab', 'facebook-f', 'instagram'], includeCss: true }]
+    ['nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faFacebookF', 'faInstagram']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faEnvelope', 'faMobileAlt']
+        }
+      ]
+    }]
   ],
   /*
   ** Build configuration
