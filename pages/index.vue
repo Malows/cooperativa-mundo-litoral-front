@@ -3,15 +3,6 @@
     navbar#inicio
 
     carousel
-    //- .container
-    //-   div
-    //-     h1.title carrusel
-        //- h2.subtitle My super-duper Nuxt.js project
-        //- .links
-        //-   a.button--green(href="https://nuxtjs.org/" target="_blank") Documentation
-        //-   a.button--grey(href="https://github.com/nuxt/nuxt.js" target="_blank") GitHub
-
-      //- carousel
 
     services#servicios
 
@@ -19,9 +10,7 @@
 
     cards#cards
 
-    #clientes.container
-      div
-        h1.title clientes
+    clientes#clientes
 
     contacto#contacto
 
@@ -36,10 +25,20 @@ import NosBanner from '../components/NosBanner'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
 import Contacto from '../components/contacto/Contacto'
+import Clientes from '../components/Clientes'
 import '~/assets/scss/style.scss'
 
 export default {
-  components: { Navbar, Cards, Services, NosBanner, 'footer-section': Footer, Carousel, Contacto }
+  components: {
+    Navbar,
+    Carousel,
+    Services,
+    NosBanner,
+    Cards,
+    Clientes,
+    Contacto,
+    'footer-section': Footer
+  }
 }
 </script>
 
