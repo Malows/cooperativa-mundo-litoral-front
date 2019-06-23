@@ -1,20 +1,20 @@
 <template lang="pug">
   .contacto__formulario
     .form__group
-      label(for="") Empresa / Nombre y Apellido
-      input(placeholder="Nombre" v-model="name")
+      label(for="name") Empresa / Nombre y Apellido
+      input(name="name" placeholder="Nombre" v-model="name")
 
     .form__group
-      label(for="") Teléfono
-      input(placeholder="Característica + Teléfono" v-model="phone")
+      label(for="phone") Teléfono
+      input(name="phone" placeholder="Característica + Teléfono" v-model="phone")
 
     .form__group
-      label(for="") Email
-      input(placeholder="Email" v-model="email")
+      label(for="email") Email
+      input(name="email" placeholder="Email" v-model="email")
 
     .form__group
-      label(for="") Mensaje
-      textarea(placeholder="Contanos tu consulta" rows="5" v-model="message")
+      label(for="message") Mensaje
+      textarea(name="message" placeholder="Contanos tu consulta" rows="5" v-model="message")
 
     .form__submit
       button Enviar

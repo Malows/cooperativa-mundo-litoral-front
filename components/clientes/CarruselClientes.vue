@@ -11,7 +11,7 @@
       template(slot="slideContent" :slide="slide")
         .custom-client-slide(@mouseover="slide.hover = true" @mouseleave="slide.hover = false")
           div.custom-client-slide__img
-            img(:src="`${slide.src}${slide.hover ? '--color' : ''}.svg`")
+            img(:src="`${slide.src}${slide.hover ? '--color' : ''}.svg`" :alt="`cliente ${slide.name}`")
           h4 {{ slide.name }}
 
 </template>
