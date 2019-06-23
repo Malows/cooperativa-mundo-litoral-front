@@ -12,10 +12,10 @@
     strong.contacto__data__subtitle Nuestras redes
 
     .contacto__data__anchors
-      a(href="#" target="_blank")
+      a(href="#" target="_blank" aria-label="Contactanos a través de facebook")
         fa(:icon="[ 'fab', 'facebook-f' ]")
 
-      a(href="#" target="_blank")
+      a(href="#" target="_blank" aria-label="Contactanos a través de instagram")
         fa(:icon="[ 'fab', 'instagram' ]")
 </template>
 
