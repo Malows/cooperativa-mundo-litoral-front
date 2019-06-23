@@ -27,6 +27,7 @@ import Carousel from '../components/Carousel'
 import Contacto from '../components/contacto/Contacto'
 import Clientes from '../components/clientes/Clientes'
 import '~/assets/scss/style.scss'
+import webpTest from '~/assets/img/test.webp'
 
 export default {
   components: {
@@ -52,7 +53,7 @@ export default {
       const img = new Image()
       img.onload = () => { this.supportWebp = !!(img.height > 0 && img.width > 0) }
       img.onerror = () => { this.supportWebp = false }
-      img.src = '~/assets/img/test.webp'
+      img.src = webpTest
     })
   },
 
