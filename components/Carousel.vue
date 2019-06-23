@@ -6,15 +6,14 @@
     :arrows="false"
     :speed="6000"
     :fixed-height="true"
-    :slide-ratio="1"
-    )
+    :slide-ratio="1")
 
-    vueper-slide(v-for="page in parsedPages" :key="page.key" :image="page.src" :title="page.title" :content="page.body")
-      //- .slide-page
-      //-   img.slide-page__img(:src="page.src")
-      //-   h4.slide-page__title {{ page.title }}
-      //-   p.slide-page__body {{ page.body }}
-      //-   button.slide-page__action Action
+    vueper-slide(
+      v-for="page in parsedPages"
+      :key="page.key"
+      :image="page.src"
+      :title="page.title"
+      :content="page.body")
 </template>
 
 <script>
@@ -23,9 +22,12 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 export default {
   components: { VueperSlides, VueperSlide },
 
+  props: {
+    width: { type: Number, default: 0 },
+    supportWebp: { type: Boolean, default: false }
+  },
+
   data: () => ({
-    width: null,
-    supportWebp: false,
     pages: [
       {
         key: '1',
@@ -66,23 +68,6 @@ export default {
         p.src = `/img/slide-${p.key}--${subfix}.${this.supportWebp ? 'webp' : 'png'}`
         return p
       })
-    }
-  },
-
-  mounted() {
-    this.$nextTick(function () {
-      window.addEventListener('resize', this.getWidth)
-      this.getWidth()
-      const img = new Image()
-      img.onload = () => { this.supportWebp = !!(img.height > 0 && img.width > 0) }
-      img.onerror = () => { this.supportWebp = false }
-      img.src = '/img/slide-1--sm.webp'
-    })
-  },
-
-  methods: {
-    getWidth() {
-      this.width = document.documentElement.clientWidth
     }
   }
 }

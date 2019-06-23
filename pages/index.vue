@@ -2,7 +2,7 @@
   main
     navbar#inicio
 
-    carousel
+    carousel(:width="width" :support-webp="supportWebp")
 
     services#servicios
 
@@ -10,7 +10,7 @@
 
     cards#cards
 
-    clientes#clientes
+    clientes#clientes(:width="width")
 
     contacto#contacto
 
@@ -25,7 +25,7 @@ import NosBanner from '../components/NosBanner'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
 import Contacto from '../components/contacto/Contacto'
-import Clientes from '../components/Clientes'
+import Clientes from '../components/clientes/Clientes'
 import '~/assets/scss/style.scss'
 
 export default {
@@ -38,6 +38,28 @@ export default {
     Clientes,
     Contacto,
     'footer-section': Footer
+  },
+
+  data: () => ({
+    width: null,
+    supportWebp: false
+  }),
+
+  mounted() {
+    this.$nextTick(function () {
+      window.addEventListener('resize', this.getWidth)
+      this.getWidth()
+      const img = new Image()
+      img.onload = () => { this.supportWebp = !!(img.height > 0 && img.width > 0) }
+      img.onerror = () => { this.supportWebp = false }
+      img.src = '~/assets/img/test.webp'
+    })
+  },
+
+  methods: {
+    getWidth() {
+      this.width = document.documentElement.clientWidth
+    }
   }
 }
 </script>

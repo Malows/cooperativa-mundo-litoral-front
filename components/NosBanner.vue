@@ -42,7 +42,7 @@
 
     &__body {
       font-size: 1.25rem;
-      line-height: 2.5rem;
+      line-height: 2;
       margin: 1.5rem 0;
     }
   }
