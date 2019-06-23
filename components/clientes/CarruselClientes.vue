@@ -3,14 +3,14 @@
     autoplay :speed="6000"
     :arrows-outside="false"
     :bullets="false"
-    :visible-slides="2" slide-multiple
-    :fixed-height="'61.8vw'" :slide-ratio="1"
+    :visible-slides="slidesAmount" slide-multiple
+    :fixed-height="sliderHeight" :slide-ratio="1"
     )
 
     vueper-slide(v-for="slide in slides" :key="slide.key")
       template(slot="slideContent" :slide="slide")
-        .custom-slide(@mouseover="slide.hover = true" @mouseleave="slide.hover = false")
-          div.custom-slide__img
+        .custom-client-slide(@mouseover="slide.hover = true" @mouseleave="slide.hover = false")
+          div.custom-client-slide__img
             img(:src="`${slide.src}${slide.hover ? '--color' : ''}.svg`")
           h4 {{ slide.name }}
 
@@ -21,6 +21,10 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 
 export default {
   components: { VueperSlides, VueperSlide },
+
+  props: {
+    width: { type: Number, default: 0 }
+  },
 
   data: () => ({
     slides: [
@@ -34,15 +38,29 @@ export default {
       { src: '/img/clientes/8', hover: false, name: 'Ministerio de Seguridad' },
       { src: '/img/clientes/9', hover: false, name: 'La Vera Pizza' }
     ]
-  })
+  }),
+
+  computed: {
+    slidesAmount() {
+      if (this.width < 600) return 2
+      if (this.width < 1200) return 3
+      return 5
+    },
+
+    sliderHeight() {
+      if (this.width < 600) return '61.8vw'
+      if (this.width < 1200) return '41.2vw'
+      return '20.6vw'
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-  .custom-slide {
+  .custom-client-slide {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 41.2vw 20.6vw;
+    grid-template-rows: 2fr 1fr;
 
     &__img {
       align-self: center;
