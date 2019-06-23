@@ -1,5 +1,6 @@
 <template lang="pug">
   vueper-slides.no-shadow(
+    v-if="width"
     autoplay :speed="6000"
     :arrows-outside="false"
     :bullets="false"

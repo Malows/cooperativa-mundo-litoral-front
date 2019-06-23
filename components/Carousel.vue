@@ -1,5 +1,6 @@
 <template lang="pug">
   vueper-slides(
+    v-if="width"
     autoplay
     fade
     :dragging-distance="50"
