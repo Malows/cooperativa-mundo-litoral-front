@@ -22,16 +22,14 @@
 <style lang="scss">
   .contacto__data {
     grid-area: datos;
-    margin: 0 calc(100% / 6);
-
     &__icons {
       display: grid;
-      grid-template-columns: 3rem auto;
+      margin: 1rem 0;
+      grid-template-columns: 2rem auto;
       grid-auto-rows: 2rem;
       align-items: center;
 
       *:nth-child(2n + 1) {
-        justify-self: center;
         font-size: 1.5rem;
       }
     }
@@ -42,8 +40,8 @@
         margin-right: 1rem;
         font-size: 1.5rem;
         @each $op in link, hover, visited, active {
-        &:#{$op} { color: var(--color-main); }
-      }
+          &:#{$op} { color: var(--color-main); }
+        }
       }
     }
 

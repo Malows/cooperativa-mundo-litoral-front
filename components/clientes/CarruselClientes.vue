@@ -1,12 +1,15 @@
 <template lang="pug">
   vueper-slides.no-shadow(
     v-if="width"
-    autoplay :speed="6000"
+    autoplay
+    :speed="6000"
     :arrows-outside="false"
     :bullets="false"
-    :visible-slides="slidesAmount" slide-multiple
-    :fixed-height="sliderHeight" :slide-ratio="1"
-    )
+    :visible-slides="5"
+    slide-multiple
+    fixed-height="20.6vw"
+    :slide-ratio="1"
+    :breakpoints="breakpoints")
 
     vueper-slide(v-for="slide in slides" :key="slide.key")
       template(slot="slideContent" :slide="slide")
@@ -38,22 +41,12 @@ export default {
       { src: '/img/clientes/7', hover: false, name: '47 Street' },
       { src: '/img/clientes/8', hover: false, name: 'Ministerio de Seguridad' },
       { src: '/img/clientes/9', hover: false, name: 'La Vera Pizza' }
-    ]
-  }),
-
-  computed: {
-    slidesAmount() {
-      if (this.width < 600) return 2
-      if (this.width < 1200) return 3
-      return 5
-    },
-
-    sliderHeight() {
-      if (this.width < 600) return '61.8vw'
-      if (this.width < 1200) return '41.2vw'
-      return '20.6vw'
+    ],
+    breakpoints: {
+      599: { visibleSlides: 2, fixedHeight: '61.8vw' },
+      1199: { visibleSlides: 3, fixedHeight: '41.2vw' }
     }
-  }
+  })
 }
 </script>
 

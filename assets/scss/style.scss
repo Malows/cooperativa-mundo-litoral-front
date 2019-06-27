@@ -1,4 +1,5 @@
 :root {
+  // colors
   --color-main: #003f54;
   --color-main--light: #005c5e;
   --color-main--lighter: #137c7e;
@@ -8,11 +9,64 @@
 
   --color-divider: #212b36;
   --color-border: #a5c0bf;
-
   --color-background: #f5f6f6;
+
+  // font size
+  --size-navbar__link: .75rem;
+
+  --size-section__title: 1.25rem;
+  --size-section__subtitle: .75rem;
+
+  --size-service__title: 1.0625rem;
+  --size-service__body: .875rem;
+
+  --size-card__title: 1.125rem;
+  --size-card__body: 1rem;
+
+  --size-nosotros__body: 1rem;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-divider);
+}
+
+.offset {
+  padding: calc(100vw / 12);
+
+  @media (min-width: 600px) {
+    padding: 2.5rem 5vw;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 2.5rem 10vw;
+  }
+
+  &__clientes-carrusel {
+    @media (min-width: 600px) {
+      padding: calc(100vw / 12);
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0 10vw;
+    }
+  }
+}
+
+.x-offset {
+  padding-left: calc(100vw / 12);
+  padding-right: calc(100vw / 12);
+
+  @media (min-width: 600px) {
+    padding: 0 5vw;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 10vw;
+  }
+}
+
+.y-offset {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }

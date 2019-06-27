@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.services
+  section.services.offset
     h4.services__title Nuestros servicios
     .services__cards
       service(
@@ -70,8 +70,6 @@ export default {
 
 <style lang="scss">
   .services {
-    padding: 2.5rem 5vw;
-
     &__cards {
       display: grid;
       grid-gap: 2.5rem;

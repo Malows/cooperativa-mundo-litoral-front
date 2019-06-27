@@ -12,7 +12,7 @@
 
     clientes#clientes(:width="width")
 
-    contacto#contacto
+    contacto#contacto(:width="width")
 
     footer-section
 </template>

@@ -79,7 +79,7 @@ export default {
     height: calc(100vh - 4rem);
 
     @media (min-width: 600px) {
-      height: 90vh;
+      height: 600px;
     }
   }
 </style>

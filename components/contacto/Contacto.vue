@@ -1,10 +1,11 @@
 <template lang="pug">
-  section.contacto
+  section.contacto.offset
     h4 Contacto
     .contacto__layout
       formulario
-      .vertical-separator
+      .vertical-separator(v-if="width >= 1200")
       datos
+
 </template>
 
 <script>
@@ -12,7 +13,9 @@ import Formulario from './Formulario'
 import Datos from './Datos'
 
 export default {
-  components: { Formulario, Datos }
+  components: { Formulario, Datos },
+
+  props: { width: { type: Number, default: 0 } }
 }
 </script>
 
@@ -22,6 +25,7 @@ export default {
       display: grid;
 
       grid-template-columns: 1fr;
+      grid-auto-rows: auto;
       grid-template-areas: 'form' 'datos';
 
       @media (min-width: 1200px) {

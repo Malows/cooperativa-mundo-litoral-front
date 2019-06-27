@@ -36,12 +36,12 @@
     }
 
     &__title {
-      font-size: 1.75rem;
+      font-size: var(--size-section__title);
       margin: 1.5rem 0;
     }
 
     &__body {
-      font-size: 1.25rem;
+      font-size: var(--size-nosotros__body);
       line-height: 2;
       margin: 1.5rem 0;
     }

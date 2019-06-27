@@ -1,5 +1,5 @@
 <template lang="pug" functional>
-  footer.footer
+  footer.footer.offset
     .footer__links
       a(href="#inicio") Inicio
       a(href="#servicios") Servicios
@@ -25,6 +25,7 @@
       align-items: center;
 
       a {
+        font-size: var(--size-navbar__link);
         text-decoration: none;
         cursor: pointer;
 

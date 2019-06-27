@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#cards
+  section#cards.offset
     .cards
       card(
         v-for="(carta, index) in cartas"
@@ -32,7 +32,7 @@ export default {
         important: true
       },
       {
-        title: 'Respecto',
+        title: 'Respeto',
         body: `Respetamos a cada cliente como el mas importante. Sabemos que cada uno es tan
          importante desde el último al primero para lograr el éxito esperado.`,
         important: false
@@ -50,7 +50,6 @@ export default {
   }
 
   .cards {
-    margin: 2rem 10vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;

@@ -1,5 +1,5 @@
 <template lang="pug">
-  nav.navbar
+  nav.navbar.x-offset
     .navbar__logo
       picture
         source(srcset="~/assets/img/logo.webp" type="image/webp" alt="brand logo")

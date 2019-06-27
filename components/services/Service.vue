@@ -41,10 +41,11 @@
 
     &__name {
       margin: 1rem 0;
-      font-size: 1.25rem;
+      font-size: var(--size-service__title);
     }
     &__body {
       margin: 1rem 0;
+      font-size: var(--size-service__body);
       line-height: 1.5rem;
     }
   }

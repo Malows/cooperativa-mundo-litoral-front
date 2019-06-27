@@ -37,9 +37,12 @@ export default {
 <style lang="scss">
   .contacto__formulario {
     grid-area: form;
-    margin: 0 calc(100% / 6);
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 600px) {
+      margin: 0 calc(100% / 6);
+    }
   }
 
   .form {
@@ -47,7 +50,7 @@ export default {
       font-size: 1rem;
       display: flex;
       flex-direction: column;
-      margin: .5rem;
+      margin: .5rem 0;
 
       label { margin-bottom: .25rem; }
 
@@ -74,7 +77,7 @@ export default {
     }
 
     &__submit button {
-      margin: .5rem;
+      margin: .5rem 0;
       padding: .5rem 2rem;
       background-color: var(--color-main);
       color: white;

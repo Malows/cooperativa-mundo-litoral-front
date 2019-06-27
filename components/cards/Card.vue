@@ -25,12 +25,12 @@
     }
 
     &__title {
-      font-size: 2rem;
+      font-size: var(--size-card__title);
       margin: 1rem;
     }
 
     &__body {
-      font-size: 1.35rem;
+      font-size: var(--size-card__body);
       line-height: 1.75rem;
       margin-top: 1rem;
       font-weight: 100;
