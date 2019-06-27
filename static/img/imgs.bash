@@ -1,4 +1,4 @@
 for file in *.png
 do
-    cwebp -q 95 "$file" -o "$file.webp"
+    cwebp -q 100 -lossless "$file" -o "${file%.*}.webp"
 done
