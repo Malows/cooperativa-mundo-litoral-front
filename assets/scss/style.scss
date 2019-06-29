@@ -34,32 +34,14 @@ body {
 .offset {
   padding: calc(100vw / 12);
 
-  @media (min-width: 600px) {
-    padding: 2.5rem 5vw;
-  }
-
   @media (min-width: 1200px) {
     padding: 2.5rem 10vw;
-  }
-
-  &__clientes-carrusel {
-    @media (min-width: 600px) {
-      padding: calc(100vw / 12);
-    }
-
-    @media (min-width: 1200px) {
-      padding: 0 10vw;
-    }
   }
 }
 
 .x-offset {
   padding-left: calc(100vw / 12);
   padding-right: calc(100vw / 12);
-
-  @media (min-width: 600px) {
-    padding: 0 5vw;
-  }
 
   @media (min-width: 1200px) {
     padding: 0 10vw;

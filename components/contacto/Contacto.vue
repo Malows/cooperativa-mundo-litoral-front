@@ -1,6 +1,6 @@
 <template lang="pug">
   section.contacto.offset
-    h4 Contacto
+    h4.contacto__title Contacto
     .contacto__layout
       formulario
       .vertical-separator(v-if="width >= 1200")
@@ -21,6 +21,17 @@ export default {
 
 <style lang="scss">
   .contacto {
+
+    @media (min-width: 600px) {
+      margin: 0 calc(100vw / 12);
+    }
+
+    &__title {
+      @media (min-width: 600px) {
+        text-align: center;
+      }
+    }
+
     &__layout {
       display: grid;
 

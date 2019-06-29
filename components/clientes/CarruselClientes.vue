@@ -1,5 +1,5 @@
 <template lang="pug">
-  vueper-slides.no-shadow(
+  vueper-slides.no-shadow.carousel-width(
     v-if="width"
     autoplay
     :speed="6000"
@@ -51,6 +51,13 @@ export default {
 </script>
 
 <style lang="scss">
+  .carousel-width {
+    @media (max-width: 599px) {
+      // min-width: 100vw;
+      margin-left: calc(100vw / 12 * -1);
+      margin-right: calc(100vw / 12 * -1);
+    }
+  }
   .custom-client-slide {
     display: grid;
     grid-template-columns: 1fr;

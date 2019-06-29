@@ -1,10 +1,10 @@
 <template lang="pug">
-  section.clientes
-    h4.x-offset.clientes__title Nuestros clientes
-    h5.x-offset.clientes__subtitle
+  section.clientes.offset
+    h4.clientes__title Nuestros clientes
+    h5.clientes__subtitle
       | Estas son algunas de las empresas que han elegido nuestros servicios y día a
       |  día renuevan la confianza en nosotros:
-    carrusel-clientes.offset__clientes-carrusel(:width="width")
+    carrusel-clientes(:width="width")
 </template>
 
 <script>
@@ -25,6 +25,7 @@ export default {
     &__title {
       font-size: var(--size-section__title);
     }
+
     &__subtitle {
       color: var(--color-border);
       font-size: var(--size-card__body);

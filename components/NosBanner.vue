@@ -1,5 +1,5 @@
 <template lang="pug" functional>
-  section#nosotros.nosotros
+  section#nosotros.nosotros.offset
     h4.nosotros__title Nosotros
     p.nosotros__body
       | Somos una cooperatica de trabajo joven y dinámica, donde la misión es llevar los mejores resultados
@@ -24,15 +24,15 @@
     padding: 0 3rem;
 
     @media (min-width: 600px) {
-      min-height: 75vh;
+      $proportion: 447 / 768;
+      min-height: calc(100vw * #{$proportion});
       background-image: url('~assets/img/nos--md.png');
-      padding: 0 10rem;
     }
 
     @media (min-width: 1200px) {
-      min-height: 50vh;
+      $proportion: 434 / 1440;
+      min-height: calc(100vw * #{$proportion});
       background-image: url('~assets/img/nos--lg.png');
-      padding: 0 15rem;
     }
 
     &__title {

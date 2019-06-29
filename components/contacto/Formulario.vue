@@ -39,10 +39,6 @@ export default {
     grid-area: form;
     display: flex;
     flex-direction: column;
-
-    @media (min-width: 600px) {
-      margin: 0 calc(100% / 6);
-    }
   }
 
   .form {

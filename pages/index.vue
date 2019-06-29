@@ -76,6 +76,7 @@ export default {
       height: 1rem;
       border-radius: 1rem;
       border: 1px solid var(--color-main--light);
+      bottom: -2rem;
 
       &--active { background-color: var(--color-main); }
     }
