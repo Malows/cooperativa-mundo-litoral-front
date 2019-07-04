@@ -12,6 +12,7 @@
   --color-background: #f5f6f6;
 
   // font size
+  --size-title: 1.75rem;
   --size-navbar__link: .75rem;
 
   --size-section__title: 1.25rem;
@@ -27,7 +28,7 @@
 }
 
 html {
-  font-family: 'relawey-regular' 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+  font-family: 'relawey-regular', 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 

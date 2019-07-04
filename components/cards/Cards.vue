@@ -3,7 +3,7 @@
     .cards
       card(
         v-for="(carta, index) in cartas"
-        :key="index"
+        :key="`card-${index}`"
         :important="carta.important"
         :title="carta.title"
         :body="carta.body"

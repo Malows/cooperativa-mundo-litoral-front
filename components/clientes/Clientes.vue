@@ -23,12 +23,17 @@ export default {
     text-align: center;
 
     &__title {
-      font-size: var(--size-section__title);
+      font-size: var(--size-title);
+      margin: 2rem 0;
     }
 
     &__subtitle {
       color: var(--color-border);
-      font-size: var(--size-card__body);
+      font-size: var(--size-card__title);
+
+      @media (min-width: 1200px) {
+        margin: 0 calc(100vw / 6);
+      }
     }
   }
 </style>

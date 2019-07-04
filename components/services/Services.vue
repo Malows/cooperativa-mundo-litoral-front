@@ -4,7 +4,7 @@
     .services__cards
       service(
         v-for="(servicio, index) in servicios"
-        :key="index"
+        :key="`service-${index}`"
         :name="servicio.name"
         :body="servicio.body"
         :src="servicio.src"

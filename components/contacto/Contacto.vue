@@ -27,7 +27,10 @@ export default {
     }
 
     &__title {
-      @media (min-width: 600px) {
+      font-size: var(--size-title);
+      margin: 2rem 0;
+
+      @media (min-width: 600px) and (max-width: 1199px) {
         text-align: center;
       }
     }
@@ -40,6 +43,7 @@ export default {
       grid-template-areas: 'form' 'datos';
 
       @media (min-width: 1200px) {
+        grid-gap: calc(100vw / 24);
         grid-template-columns: 1fr 1px 1fr;
         grid-template-areas: 'form separator datos';
       }
@@ -48,7 +52,7 @@ export default {
 
   .vertical-separator {
     grid-area: separator;
-    margin: 5rem 0;
+    margin: 2rem 0;
     border-right: 1px solid var(--color-border);
   }
 </style>

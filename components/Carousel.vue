@@ -11,7 +11,7 @@
 
     vueper-slide(
       v-for="page in parsedPages"
-      :key="page.key"
+      :key="'carousel-' + page.key"
       :image="page.src")
       template(slot="slideContent" :page="page")
         .carousel-slide.x-offset
@@ -19,10 +19,10 @@
             h4.carousel-slide__title {{ page.title }}
             p.carousel-slide__subtitle {{ page.body }}
             .carousel-slide__social
-              a(href="#" target="_blank" aria-label="Contactanos a través de facebook")
+              a(href="https://www.facebook.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de facebook")
                 fa(:icon="[ 'fab', 'facebook-f' ]")
 
-              a(href="#" target="_blank" aria-label="Contactanos a través de instagram")
+              a(href="https://www.instagram.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de instagram")
                 fa(:icon="[ 'fab', 'instagram' ]")
 
           .carousel-slide__button

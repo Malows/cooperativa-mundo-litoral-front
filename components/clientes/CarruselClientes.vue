@@ -11,7 +11,7 @@
     :slide-ratio="1"
     :breakpoints="breakpoints")
 
-    vueper-slide(v-for="slide in slides" :key="slide.key")
+    vueper-slide(v-for="slide in slides" :key="slide.name")
       template(slot="slideContent" :slide="slide")
         .custom-client-slide(@mouseover="slide.hover = true" @mouseleave="slide.hover = false")
           div.custom-client-slide__img

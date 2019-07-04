@@ -7,7 +7,7 @@
 
     navbar-menu(v-if="this.width < 600" :links="links")
     .navbar__items(v-else)
-      a.navbar__link(v-for="link in links" :key="value" :href="link.value") {{ link.label }}
+      a.navbar__link(v-for="link in links" :key="'footer-' + link.value" :href="link.value") {{ link.label }}
 </template>
 
 <script>

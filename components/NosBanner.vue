@@ -2,10 +2,12 @@
   section#nosotros.nosotros.offset
     h4.nosotros__title Nosotros
     p.nosotros__body
-      | Somos una cooperatica de trabajo joven y dinámica, donde la misión es llevar los mejores resultados
-      | en los servicios prestados. Somos una Cooperativa eficiente y eficaz, que permite ser reconocida a
-      | nivel local por su trayectoria profesional. Desarrollamos trabajos en base a objetivos claros y
-      | comunes, dentro del proceso de mejora continua, brindando a nuestros clientes servicios de calidad.
+      | Somos una cooperativa de trabajo joven y dinámica, donde la misión es
+      |  llevar los mejores resultados en los servicios prestados. Somos
+      |  eficientes y eficaces, lo que nos permite ser reconocidos a nivel
+      |  local por nuestra trayectoria profesional. Desarrollamos trabajos en
+      |  base a objetivos claros y comunes, dentro del proceso de mejora
+      |  continua, brindando a nuestros clientes servicios de calidad.
 </template>
 
 <style lang="scss">
@@ -36,7 +38,7 @@
     }
 
     &__title {
-      font-size: var(--size-section__title);
+      font-size: var(--size-title);
       margin: 1.5rem 0;
     }
 
@@ -44,6 +46,11 @@
       font-size: var(--size-nosotros__body);
       line-height: 2;
       margin: 1.5rem 0;
+      @media screen {
+        $column: 100vw / 12;
+        margin-left: $column;
+        margin-right: $column;
+      }
     }
   }
 </style>
