@@ -12,9 +12,21 @@
     vueper-slide(
       v-for="page in parsedPages"
       :key="page.key"
-      :image="page.src"
-      :title="page.title"
-      :content="page.body")
+      :image="page.src")
+      template(slot="slideContent" :page="page")
+        .carousel-slide.x-offset
+          div
+            h4.carousel-slide__title {{ page.title }}
+            p.carousel-slide__subtitle {{ page.body }}
+            .carousel-slide__social
+              a(href="#" target="_blank" aria-label="Contactanos a través de facebook")
+                fa(:icon="[ 'fab', 'facebook-f' ]")
+
+              a(href="#" target="_blank" aria-label="Contactanos a través de instagram")
+                fa(:icon="[ 'fab', 'instagram' ]")
+
+          .carousel-slide__button
+            a(href="#contacto") Contratar Servicios
 </template>
 
 <script>
@@ -80,6 +92,57 @@ export default {
 
     @media (min-width: 600px) {
       height: 600px;
+    }
+  }
+
+  .carousel-slide {
+    width: 100vw;
+    height: calc(50vh - 2rem);
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (min-width: 600px) {
+      height: 300px;
+    }
+
+    &__title { font-size: 2.5rem; }
+
+    &__subtitle {
+      font-size: 1.8rem;
+      $shadow-color: rgba(34, 34, 34, 0.6);
+      text-shadow: 0 5px 7px $shadow-color;
+    }
+
+    &__social {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      display: flex;
+
+      a {
+        margin: 1rem 1rem 0 0;
+        text-decoration: none;
+        cursor: pointer;
+        @each $op in link, hover, visited, active {
+          &:#{$op} { color: white; }
+        }
+      }
+    }
+
+    &__button {
+      color: white;
+      a {
+        padding: 1rem 2rem;
+        background-color: var(--color-main);
+        text-decoration: none;
+        cursor: pointer;
+
+        @each $op in link, hover, visited, active {
+          &:#{$op} { color: white; }
+        }
+      }
     }
   }
 </style>
