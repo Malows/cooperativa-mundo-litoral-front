@@ -26,6 +26,11 @@
   --size-nosotros__body: 1rem;
 }
 
+html {
+  font-family: 'relawey-regular' 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-divider);
@@ -51,4 +56,16 @@ body {
 .y-offset {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+@font-face {
+  font-family: 'relawey-regular';
+  font-display: optional;
+  src: url('~assets/fonts/raleway/Raleway-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'relawey-semibold';
+  font-display: optional;
+  src: url('~assets/fonts/raleway/Raleway-SemiBold.ttf') format('ttf');
 }
