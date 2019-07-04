@@ -6,6 +6,9 @@
       a(href="#nosotros") Nosotros
       a(href="#clientes") Clientes
       a(href="#contacto") Contacto
+
+    p.footer__small-reference Cooperativa Mundo Litoral 2019
+
 </template>
 
 <style lang="scss">
@@ -17,6 +20,10 @@
     grid-template-areas: 'links';
     grid-template-columns: 1fr;
     color: white;
+
+    @media (min-width: 600px) {
+      grid-template-areas: 'links' 'small';
+    }
 
     &__links {
       grid-area: 'links';
@@ -32,6 +39,15 @@
         @each $op in link, hover, visited, active {
           &:#{$op} { color: white; }
         }
+      }
+    }
+
+    &__small-reference {
+      grid-area: 'small';
+      display: none;
+
+      @media (min-width: 600px) and (max-width: 1199px) {
+        display: block;
       }
     }
   }
