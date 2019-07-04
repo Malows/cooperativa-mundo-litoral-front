@@ -46,7 +46,7 @@ export default {
         },
         {
           set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faEnvelope', 'faMobileAlt']
+          icons: ['faEnvelope', 'faMobileAlt', 'faBars', 'faTimes']
         }
       ]
     }]
