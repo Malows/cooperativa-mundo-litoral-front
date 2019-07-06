@@ -6,7 +6,7 @@
 
     services#servicios
 
-    nos-banner#nosotros
+    nosotros#nosotros
 
     cards#cards
 
@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar/Navbar'
 import Cards from '../components/cards/Cards'
 import Services from '../components/services/Services'
-import NosBanner from '../components/NosBanner'
+import Nosotros from '../components/Nosotros'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
 import Contacto from '../components/contacto/Contacto'
@@ -34,7 +34,7 @@ export default {
     Navbar,
     Carousel,
     Services,
-    NosBanner,
+    Nosotros,
     Cards,
     Clientes,
     Contacto,
