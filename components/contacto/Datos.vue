@@ -12,12 +12,17 @@
     strong.contacto__data__subtitle Nuestras redes
 
     .contacto__data__anchors
-      a(href="https://www.facebook.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de facebook")
-        fa(:icon="[ 'fab', 'facebook-f' ]")
+      icon(name="facebook")
+      icon(name="instagram")
 
-      a(href="https://www.instagram.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de instagram")
-        fa(:icon="[ 'fab', 'instagram' ]")
 </template>
+
+<script>
+import Icon from '../Icon'
+export default {
+  components: { Icon }
+}
+</script>
 
 <style lang="scss">
   .contacto__data {

@@ -1,5 +1,9 @@
-<template lang="pug" functional>
+<template lang="pug">
   footer.footer.offset
+    .footer__big-reference
+      p.footer__big-reference__title MUNDO LITORAL
+      p.footer__big-reference__subtitle Cooperativa limitada de trabajo
+
     .footer__links
       a(href="#inicio") Inicio
       a(href="#servicios") Servicios
@@ -8,15 +12,19 @@
       a(href="#contacto") Contacto
 
     .footer__social
-      a(href="https://www.facebook.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de facebook")
-        fa(:icon="[ 'fab', 'facebook-f' ]")
-
-      a(href="https://www.instagram.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de instagram")
-        fa(:icon="[ 'fab', 'instagram' ]")
+      icon(name="facebook")
+      icon(name="instagram")
 
     p.footer__small-reference Cooperativa Mundo Litoral 2019
 
 </template>
+
+<script>
+import Icon from './Icon'
+export default {
+  components: { Icon }
+}
+</script>
 
 <style lang="scss">
   .footer {
@@ -34,11 +42,22 @@
       grid-template-rows: 1fr 1fr;
     }
 
+    @media (min-width: 1200px) {
+      grid-template-areas: 'big . links' 'big . social';
+      grid-template-rows: 3rem auto;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     &__links {
-      grid-area: 'links';
+      grid-area: links;
       display: flex;
       justify-content: space-around;
       align-items: center;
+
+      @media (min-width: 1200px) {
+        justify-content: space-between;
+        align-items: flex-start;
+      }
 
       a {
         font-size: var(--size-navbar__link);
@@ -56,7 +75,7 @@
     }
 
     &__small-reference {
-      grid-area: 'small';
+      grid-area: small;
       display: none;
       text-align: center;
       font-size: var(--size-navbar__link);
@@ -67,12 +86,33 @@
       }
     }
 
+    &__big-reference {
+      grid-area: big;
+      display: none;
+
+      @media (min-width: 1200px) {
+        display: block;
+      }
+
+      &__title {
+        font-family: 'relawey-heavy', 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+          'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      &__subtitle {
+        font-size: var(--size-section__subtitle)
+      }
+    }
+
     &__social {
+      grid-area: social;
       display: none;
       font-size: 1.5rem;
 
       a {
-        margin-right: 1rem;
+        &:not(:last-child) { margin-right: 1rem; }
+
         text-decoration: none;
         cursor: pointer;
         color: white;
@@ -84,6 +124,7 @@
 
       @media (min-width: 1200px) {
         display: flex;
+        justify-self: flex-end;
       }
     }
   }

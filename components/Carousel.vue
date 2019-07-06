@@ -19,11 +19,8 @@
             h4.carousel-slide__title {{ page.title }}
             p.carousel-slide__subtitle {{ page.body }}
             .carousel-slide__social
-              a(href="https://www.facebook.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de facebook")
-                fa(:icon="[ 'fab', 'facebook-f' ]")
-
-              a(href="https://www.instagram.com/mundolitoral/" target="_blank" aria-label="Contactanos a través de instagram")
-                fa(:icon="[ 'fab', 'instagram' ]")
+              icon(name="facebook")
+              icon(name="instagram")
 
           .carousel-slide__button
             a(href="#contacto") Contratar Servicios
@@ -31,9 +28,9 @@
 
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides'
-
+import Icon from './Icon'
 export default {
-  components: { VueperSlides, VueperSlide },
+  components: { VueperSlides, VueperSlide, Icon },
 
   props: {
     width: { type: Number, default: 0 },

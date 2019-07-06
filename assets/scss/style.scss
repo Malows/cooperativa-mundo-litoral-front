@@ -48,7 +48,7 @@ body {
   padding: calc(100vw / 12);
 
   @media (min-width: 1200px) {
-    padding: 2.5rem 10vw;
+    padding: 3rem 10vw;
   }
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 @font-face {
-  font-family: 'relawey-semibold';
+  font-family: 'relawey-heavy';
   font-display: optional;
-  src: url('~assets/fonts/raleway/Raleway-SemiBold.ttf') format('ttf');
+  src: url('~assets/fonts/raleway/Raleway-Heavy.ttf') format('ttf');
 }
