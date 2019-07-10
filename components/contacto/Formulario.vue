@@ -45,17 +45,15 @@ export default {
   },
 
   methods: {
-    async submit() {
+    submit() {
       const body = this.payload
 
-      const response = await fetch('/api/messages', {
+      fetch('/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body
-      }).then(res => res.json())
+      })
 
-      // eslint-disable-next-line no-console
-      console.log(response)
       this.name = ''
       this.email = ''
       this.phone = ''
