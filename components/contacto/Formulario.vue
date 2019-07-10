@@ -14,10 +14,10 @@
 
     .form__group
       label(for="message") Mensaje
-      textarea(name="message" placeholder="Contanos tu consulta" rows="5" v-model="message" @click="submit")
+      textarea(name="message" placeholder="Contanos tu consulta" rows="5" v-model="message")
 
     .form__submit
-      button Enviar
+      button(@click="submit") Enviar
 
 </template>
 
