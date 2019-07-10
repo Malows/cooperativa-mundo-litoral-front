@@ -48,15 +48,14 @@ export default {
     async submit() {
       const body = this.payload
 
-      await fetch('/api/messages', {
+      const response = await fetch('/api/messages', {
         method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
         body
-      })
+      }).then(res => res.json())
 
+      // eslint-disable-next-line no-console
+      console.log(response)
       this.name = ''
       this.email = ''
       this.phone = ''
