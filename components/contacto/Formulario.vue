@@ -46,14 +46,17 @@ export default {
 
   methods: {
     async submit() {
+      const body = this.payload
+
       await fetch('/api/messages', {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
-        body: this.payload
+        body
       })
+
       this.name = ''
       this.email = ''
       this.phone = ''
