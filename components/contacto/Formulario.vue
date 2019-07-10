@@ -26,11 +26,40 @@ export default {
   name: 'Formulario',
 
   data: () => ({
-    name: null,
-    email: null,
-    phone: null,
-    message: null
-  })
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  }),
+
+  computed: {
+    payload() {
+      const ret = {
+        name: this.name,
+        contact: `tel: ${this.phone} - mail: ${this.email}`,
+        message: this.message
+      }
+
+      return JSON.stringify(ret)
+    }
+  },
+
+  methods: {
+    async submit() {
+      await fetch('/api/messages', {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: this.payload
+      })
+      this.name = ''
+      this.email = ''
+      this.phone = ''
+      this.message = ''
+    }
+  }
 }
 </script>
 
