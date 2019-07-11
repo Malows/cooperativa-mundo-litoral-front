@@ -4,10 +4,10 @@
 
     .contacto__data__icons
       fa(:icon="['fas', 'mobile-alt']")
-      p Tel: +54 (0342) 464 8269
+      p Tel: 3426309491
 
       fa(:icon="['fas', 'envelope']")
-      p cooperativalitoral@gmail.com
+      p mundolitoral@gmail.com
 
     strong.contacto__data__subtitle Nuestras redes
 
