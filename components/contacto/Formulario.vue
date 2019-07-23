@@ -2,22 +2,26 @@
   .contacto__formulario
     .form__group
       label(for="name") Empresa / Nombre y Apellido
-      input(name="name" placeholder="Nombre" v-model="name")
+      input(name="name" placeholder="Nombre" v-model="name" @focus="hideMessage")
 
     .form__group
       label(for="phone") Teléfono
-      input(name="phone" placeholder="Característica + Teléfono" v-model="phone")
+      input(name="phone" placeholder="Característica + Teléfono" v-model="phone" @focus="hideMessage")
 
     .form__group
       label(for="email") Email
-      input(name="email" placeholder="Email" v-model="email")
+      input(name="email" placeholder="Email" v-model="email" @focus="hideMessage")
 
     .form__group
       label(for="message") Mensaje
-      textarea(name="message" placeholder="Contanos tu consulta" rows="5" v-model="message")
+      textarea(name="message" placeholder="Contanos tu consulta" rows="5" v-model="message" @focus="hideMessage")
 
     .form__submit
       button(@click="submit") Enviar
+
+    .form__message(v-show="showMessage")
+      fa(:icon="[ 'fas', 'check' ]")
+      span  Mensaje enviado
 
 </template>
 
@@ -29,7 +33,8 @@ export default {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    showMessage: false
   }),
 
   computed: {
@@ -45,6 +50,10 @@ export default {
   },
 
   methods: {
+    hideMessage() {
+      this.showMessage = false
+    },
+
     submit() {
       const body = this.payload
 
@@ -58,6 +67,7 @@ export default {
       this.email = ''
       this.phone = ''
       this.message = ''
+      this.showMessage = true
     }
   }
 }
@@ -111,6 +121,11 @@ export default {
       border: none;
       border-radius: 3px;
       box-shadow: 0 1px 4px 0 #333;
+    }
+
+    &__message {
+      margin: .5rem 0;
+      font-weight: 600;
     }
   }
 </style>
