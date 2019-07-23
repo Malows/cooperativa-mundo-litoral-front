@@ -9,9 +9,9 @@
           :alt="props.name"
           )
         img(
-          :srcset="`${props.src}--sm.png 599w, ${props.src}--md.png 11998w, ${props.src}--lg.png 1200w`"
+          :srcset="`${props.src}--sm.jpg 599w, ${props.src}--md.jpg 11998w, ${props.src}--jpg.png 1200w`"
           sizes="(max-width: 599px) 100%, (max-width: 1199px) 100%, 100%"
-          :src="`${props.src}--sm.png`"
+          :src="`${props.src}--sm.jpg`"
           :alt="props.name"
           )
 
